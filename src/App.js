@@ -5,6 +5,8 @@ import Iniciosesion from "./components/Login.js";
 import NotFound from "./components/NotFound.js";
 import NavBar from "./components/Navbar";
 import RegistroUsuario from "./components/RegistroUsuario";
+import RegVehiculos from "./components/RegVehiculos";
+import ListaVehiculos from "./components/ListaVehiculos";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Switch>
             <Route exact path="/Login" component={Iniciosesion} />
             <Route path="/adduser" component={RegistroUsuario} />
+            <Route path="/addvehiculo" component={RegVehiculos} />
+            <Route path="/allVehiculos" component={ListaVehiculos} />
             <Route path="*" component={NotFound} />
           </Switch>
         </div>
