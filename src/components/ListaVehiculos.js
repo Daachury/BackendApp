@@ -21,13 +21,9 @@ const ListVehiculos = () => {
     <div class="main-content">
           <h4>Vehiculos</h4>  
           <div className="notes-list mt-4">
-            {vehiculos &&
-              vehiculos.map((vehiculo) => (
-                <div
-                  key={vehiculo.idVehiculo}
-                  className="notes-preview mt-3 border border-secondary"
-                >
-                  <Link to="#">
+            {vehiculos.length > 0 ? vehiculos.map((vehiculo) => (
+                <div key={vehiculo.idVehiculo} className="notes-preview mt-3 border border-secondary">
+                  <Link to={`/allVehiculo/${vehiculo.idVehiculo}`}>
                     <h5 className="primary-color text-capitalize">
                       {vehiculo.marca}
                     </h5>
@@ -38,7 +34,8 @@ const ListVehiculos = () => {
                     <p>{vehiculo.kilometraje}</p>
                   </Link>
                 </div>
-              ))}
+              )) : <div><h4>Vehiculo No encontrado</h4> </div>
+            }
           </div>
         </div>
       

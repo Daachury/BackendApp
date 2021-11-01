@@ -4,7 +4,11 @@ const createVehiculo = data => {
     return httpClient.post("/addVehiculo",data);
 };
 
-const getVehiculos = data => {
+const getVehiculos = () => {
     return httpClient.get("/allVehiculo");
 };
-export default {createVehiculo,getVehiculos};
+
+const getVehiculoID = id => {
+    return httpClient.get(`/allVehiculo/${id}`);
+};
+export default {createVehiculo, getVehiculos, getVehiculoID};

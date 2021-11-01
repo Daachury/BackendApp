@@ -7,6 +7,7 @@ import NavBar from "./components/Navbar";
 import RegistroUsuario from "./components/RegistroUsuario";
 import RegVehiculos from "./components/RegVehiculos";
 import ListaVehiculos from "./components/ListaVehiculos";
+import VehicuEdit from "./components/VehiculoEditar";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/adduser" component={RegistroUsuario} />
             <Route path="/addvehiculo" component={RegVehiculos} />
             <Route path="/allVehiculos" component={ListaVehiculos} />
+            <Route path="/allVehiculo/:id" component={VehicuEdit} />
             <Route path="*" component={NotFound} />
           </Switch>
         </div>
