@@ -18,8 +18,7 @@ const RegistroUsuario = () => {
         RegVehiculoService.createVehiculo(addvehiculo)
             .then( response => {
               console.log("Registro Exitoso",response.data);
-
-              history.push("/addVehiculo");
+              history.push("/allVehiculos");
             })
             .catch(error => {
               console.log("data",addvehiculo);

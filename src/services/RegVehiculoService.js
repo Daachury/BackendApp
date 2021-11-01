@@ -11,4 +11,10 @@ const getVehiculos = () => {
 const getVehiculoID = id => {
     return httpClient.get(`/allVehiculo/${id}`);
 };
-export default {createVehiculo, getVehiculos, getVehiculoID};
+
+const removeVehiculoID = id => {
+    return httpClient.delete(`/allVehiculo/${id}`);
+};
+
+
+export default {createVehiculo, getVehiculos, getVehiculoID, removeVehiculoID};
