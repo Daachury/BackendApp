@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route , Switch } from "react-router-dom";
-import Iniciosesion from "./components/Login.js";
+import Login from "./components/Login.js";
 import NotFound from "./components/NotFound.js";
 import NavBar from "./components/Navbar";
 import RegistroUsuario from "./components/RegistroUsuario";
@@ -16,7 +16,7 @@ function App() {
         <NavBar />
         <div>
           <Switch>
-            <Route exact path="/Login" component={Iniciosesion} />
+          <Route path="/" component={Login} />
             <Route path="/adduser" component={RegistroUsuario} />
             <Route path="/addvehiculo" component={RegVehiculos} />
             <Route path="/allVehiculos" component={ListaVehiculos} />

@@ -38,6 +38,7 @@ const NavBar = () => {
                   Registro Vehiculos
                 </Link>
               </li>
+              
               <li class="nav-item">
                 <Link to="/allVehiculos" className="ml-3 navbar__item">
                   Lista Vehiculos
@@ -45,15 +46,50 @@ const NavBar = () => {
               </li>
 
               <li class="nav-item">
+                <Link to="/addMantenimiento" className="ml-3 navbar__item">
+                  Mantenimiento
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/allMantenimiento" className="ml-3 navbar__item">
+                  Lista Mantenimientos
+                </Link>
+              </li>
+              <hr/>
+              <li class="nav-item">
+                <Link to="/addModelo" className="ml-3 navbar__item">
+                  Registro de modelo
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/allModelo" className="ml-3 navbar__item">
+                  Lista Modelos Vehiculo
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/addParteVehiculo" className="ml-3 navbar__item">
+                  Registro de partes
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/allParteVehiculo" className="ml-3 navbar__item">
+                  Lista Partes Vehiculo
+                </Link>
+              </li>
+              <hr/>
+              <li class="nav-item">
                 <Link to="/adduser" className="ml-3 navbar__item">
                   Registro Usuarios
                 </Link>
               </li>
+
               <li class="nav-item">
-                <Link to="/" className="ml-3 navbar__item">
-                  Mantenimiento
+                <Link to="/allUser" className="ml-3 navbar__item">
+                  Lista Usuarios
                 </Link>
               </li>
+              
+              <hr/>
               <li class="nav-item">
                 <Link to="/Login" className="ml-3 navbar__item">
                   Perfiles

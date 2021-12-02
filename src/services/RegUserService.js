@@ -4,4 +4,8 @@ const createUser = data => {
   return httpClient.post("/newuser",data);
 };
 
-export default { createUser };
+const getUser = () => {
+  return httpClient.get("/allUser");
+};
+
+export default { createUser, getUser };

@@ -4,4 +4,8 @@ const getAll = () => {
   return httpClient.get("/alluser");
 };
 
-export default { getAll };
+const inicioSesion = () => {
+  return httpClient.get("/inicioSesion");
+};
+
+export default { getAll, inicioSesion };

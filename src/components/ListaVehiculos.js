@@ -25,16 +25,18 @@ const ListVehiculos = () => {
                 <div key={vehiculo.idVehiculo} className="notes-preview mt-3 border border-secondary">
                   <Link to={`/allVehiculo/${vehiculo.idVehiculo}`}>
                     <h5 className="primary-color text-capitalize">
-                      {vehiculo.marca}
+                      Dueño: Camilo Gomez
                     </h5>
                     <h5 className="primary-color text-capitalize">
-                      {vehiculo.referencia}
+                      Marca: {vehiculo.nombre}
+                    </h5>
+                    <h5 className="primary-color text-capitalize">
+                     Kilometraje: {vehiculo.kilometraje} km
                     </h5>
                     <p>{vehiculo.nuevo}</p>
-                    <p>{vehiculo.kilometraje}</p>
                   </Link>
                 </div>
-              )) : <div><h4>Vehiculo No encontrado</h4> </div>
+              )) : <div><h4>Vehiculo No encontrado</h4> </div>  
             }
           </div>
         </div>
