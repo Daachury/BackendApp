@@ -4,8 +4,8 @@ const getAll = () => {
   return httpClient.get("/alluser");
 };
 
-const inicioSesion = () => {
-  return httpClient.get("/inicioSesion");
+const inicioSesion = id => {
+  return httpClient.get(`/inicioSesion/${id}`);
 };
 
 export default { getAll, inicioSesion };

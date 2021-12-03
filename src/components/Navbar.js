@@ -1,9 +1,26 @@
-import React from "react";
+import React, { Component, useState } from 'react';
 import { Link } from "react-router-dom";
+import Cookies from 'universal-cookie';
 
-const NavBar = () => {
-  return (
-    <div>
+const cookies = new Cookies();
+
+class NavBar extends Component {
+
+  cerrarSesion = () => {
+
+    cookies.remove('username', { path: "/" });
+    window.location.href = './';
+  }
+
+  componentDidMount = () => {
+    if (!cookies.get('username')) {
+      window.location.href = "./";
+    }
+    }
+
+  render() {
+    return (
+      <div>
       <header className="navbar">
         <div className="navbar__title">Motor APP</div>
         <form class="form-inline my-2 my-lg-0">
@@ -18,9 +35,8 @@ const NavBar = () => {
             Search{" "}
           </button>
         </form>
-        <Link to="/" className="ml-3">
-          Cerrar Sesion
-        </Link>
+        <button onClick={() => this.cerrarSesion()}>Cerrar Sesión</button>
+
       </header>
 
       <div class="container-fluid">
@@ -38,7 +54,7 @@ const NavBar = () => {
                   Registro Vehiculos
                 </Link>
               </li>
-              
+
               <li class="nav-item">
                 <Link to="/allVehiculos" className="ml-3 navbar__item">
                   Lista Vehiculos
@@ -55,7 +71,7 @@ const NavBar = () => {
                   Lista Mantenimientos
                 </Link>
               </li>
-              <hr/>
+              <hr />
               <li class="nav-item">
                 <Link to="/addModelo" className="ml-3 navbar__item">
                   Registro de modelo
@@ -76,7 +92,7 @@ const NavBar = () => {
                   Lista Partes Vehiculo
                 </Link>
               </li>
-              <hr/>
+              <hr />
               <li class="nav-item">
                 <Link to="/adduser" className="ml-3 navbar__item">
                   Registro Usuarios
@@ -88,8 +104,8 @@ const NavBar = () => {
                   Lista Usuarios
                 </Link>
               </li>
-              
-              <hr/>
+
+              <hr />
               <li class="nav-item">
                 <Link to="/Login" className="ml-3 navbar__item">
                   Perfiles
@@ -99,8 +115,10 @@ const NavBar = () => {
           </nav>
         </div>
       </div>
-    </div>
-  );
-};
+    </div >
+
+    );
+  }
+}
 
 export default NavBar;

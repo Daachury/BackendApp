@@ -39,7 +39,16 @@ const RegistroUsuario = () => {
             </label>
             <select id="category" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)}>
               <option value="KTM duke 200">KTM duke 200</option>
-              <option value="Yamaha MT 03">Yamaha MT 03</option>
+              <option value="Benelli 310">Benelli 310</option>
+              <option value="Yamaha R3">Yamaha R3</option>
+              <option value="Yamaha Tracer">Yamaha Tracer</option>
+              <option value="Yamaha R1m">Yamaha R1m</option>
+              <option value="KTM duke ng 250">KTM duke ng 250</option>
+              <option value="KTM duke ng 390">KTM duke ng 390</option>
+              <option value="Ducati Panigale">Ducati Panigale</option>
+              <option value="Pulsar 180">Pulsar 180</option>
+              <option value="Suzuki gs 500">Suzuki gs 500</option>
+              <option value="Suzuki gs xr 150">Suzuki gs xr 150</option>
             </select>
           </div>
 
@@ -55,26 +64,25 @@ const RegistroUsuario = () => {
               Estado: <sup>*</sup>
             </label>
             <select id="category" className="form-control" value={nuevo} onChange={(e) => setestado(e.target.value)}>
-              <option value="TRUE">TRUE</option>
-              <option value="FALSE">FALSE</option>
+              <option value="TRUE">Nuevo</option>
+              <option value="FALSE">Segunda</option>
             </select>
           </div>        
 
           <div className="form-group">
             <label htmlFor="title">
-              idModelo: <sup>*</sup>
+              Modelo: <sup>*</sup>
             </label>
             <input type="int" className="form-control" id="title" value={idModelo} onChange={(e) => setIdModelo(e.target.value)} />
           </div>
 
           <div className="form-group">
             <label htmlFor="title">
-              idUsuairo: <sup>*</sup>
+              Usuairo: <sup>*</sup>
             </label>
             <input type="int" className="form-control" id="title" value={idUsuario} onChange={(e) => setIdUsuario(e.target.value)} />
           </div>
 
-          
           <div className="text-center">
             <button className="btn-lg" onClick={(e) => saveRegistro(e)}>Registrar</button>
             <>&nbsp;&nbsp;&nbsp;&nbsp;</>
