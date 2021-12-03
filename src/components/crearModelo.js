@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 import RegCrearModeloService from "../services/RegCrearModeloService";
 
-const RegistroModelo = () => {
+const RegistroModeloM = () => {
 
     const [modelo, setModelo] = useState('');
     const [marca, setMarca] = useState('');
@@ -93,4 +93,4 @@ const RegistroModelo = () => {
     );
 };
 
-export default RegistroModelo;
+export default RegistroModeloM;

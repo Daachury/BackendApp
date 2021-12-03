@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RegCrearMantenimiento from "../services/RegCrearMantenimiento";
 
-const ListModelos = () => {
+const Listmantenimientoss = () => {
 
     const [mantenimientos, setMantenimiento] = useState([]);
 
@@ -41,4 +41,4 @@ const ListModelos = () => {
     );
 };
 
-export default ListModelos;
+export default Listmantenimientoss;

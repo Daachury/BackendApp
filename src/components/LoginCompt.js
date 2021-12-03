@@ -5,7 +5,6 @@ import axios from 'axios';
 
 import Cookies from 'universal-cookie';
 
-const url = "http://localhost:8090/api/inicioSesion/";
 const cookies = new Cookies();
 
 class LoginCom extends Component {
@@ -40,7 +39,9 @@ class LoginCom extends Component {
                     var respuesta = response;               
                     cookies.set('username', respuesta.username, { path: "/" });
                     alert(`Bienvenido ${respuesta.nombre}`);
-                    window.location.href = "./menu";
+                 
+                    window.location.href = "./home";
+                   
                 } else {
                     alert('User password son incorrectos');
                 }
@@ -59,12 +60,7 @@ class LoginCom extends Component {
                     <div className="form-group">
                         <label>Usuario: </label>
                         <br />
-                        <input
-                            type="text"
-                            className="form-control"
-                            name="username"
-                            onChange={this.handleChange}
-                        />
+                        <input type="text" className="form-control" name="username" onChange={this.handleChange}/>
                         <br />
                         <label>Contraseña: </label>
                         <br />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import RegCrearModeloService from "../services/RegCrearModeloService";
 
-const ListModelos = () => {
+const ListModelosM = () => {
 
     const [modelos, setModelo] = useState([]);
 
@@ -49,4 +49,4 @@ const ListModelos = () => {
     );
 };
 
-export default ListModelos;
+export default ListModelosM;

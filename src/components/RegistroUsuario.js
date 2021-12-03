@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import RegUserService from "../services/RegUserService";
+import NavBar from "./Navbar";
 
 
 const RegistroUsuario = () => {

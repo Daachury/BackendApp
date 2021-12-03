@@ -1,9 +1,11 @@
+import Login from '../Login.css';
+
 const NotFound = () => {
 
     return (
-        <div>
-            <p>Page Not Found</p>
-        </div>
+        <div className="page">
+        
+      </div>
     );
 };
 

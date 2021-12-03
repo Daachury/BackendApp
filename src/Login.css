@@ -11,3 +11,33 @@
   .containerSecundario{
     text-align: center;
   }
+
+  body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("https://agenciapi.co/sites/default/files/2021-06/universidadElBosque_Facebook_2862021.jpeg"); /*Put your image url*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; 
+  }
+
+  .page {
+    margin-left: 28em;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    width: 50%;
+    z-index: -1;
+    
+    background-image: url(https://i.giphy.com/media/9J7tdYltWyXIY/200.webp);
+  }

@@ -15,6 +15,7 @@ class NavBar extends Component {
   componentDidMount = () => {
     if (!cookies.get('username')) {
       window.location.href = "./";
+     
     }
     }
 
@@ -44,8 +45,8 @@ class NavBar extends Component {
           <nav class="navbar flex-md-column flex-row align-items-start">
             <ul class="flex-md-column flex-row navbar-nav">
               <li class="nav-item">
-                <Link to="/" className="ml-3 navbar__item">
-                  Home
+                <Link to="/home" className="ml-3 navbar__item">
+                  Home  
                 </Link>
               </li>
 
